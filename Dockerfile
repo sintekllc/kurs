@@ -21,6 +21,7 @@ RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 RUN echo "c.NotebookApp.token = ''" >> jupyter_notebook_config.py
 RUN echo "c.NotebookApp.password = ''" >> jupyter_notebook_config.py
 
+ADD regions.csv regions.csv
 
 # Install requirements for Python 3
 RUN /home/main/anaconda/envs/python3/bin/pip install -r requirements.txt
